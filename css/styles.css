@@ -52,10 +52,6 @@ img {
   }
 }
 
-.section-wawd {
-  padding-bottom: 120px;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -78,6 +74,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .container {
+    width: 100%;
     width: 1158px;
     padding: 0 15px;
   }
@@ -232,9 +229,6 @@ img {
 .mobile-menu-link.current {
   color: var(--color-pressed-button);
 }
- {
-  color: var(--color-pressed-button);
-}
 
 .mobile-list-nav {
   margin-bottom: 284px;
@@ -287,9 +281,13 @@ img {
   padding-right: 60px;
 }
 
-@media screen and (max-width: 767px) {
+.header-container-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
   .header-container-desktop {
-    display: none;
+    display: block;
   }
 }
 
@@ -439,17 +437,27 @@ img {
 /*Секція 1 із кнопкою*/
 
 .hero-section {
-  width: 100%;
+  height: 432px;
+  max-width: 1440px;
   padding-top: 112px;
   padding-bottom: 112px;
+  margin: auto;
   background-color: var(--color-main-dark);
   color: var(--color-main-light);
-  text-align: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/css/peopleoffice.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-width: 428px) {
   .hero-section {
     width: 428px;
+    height: 436px;
   }
 }
 
@@ -461,8 +469,12 @@ img {
 
 @media screen and (min-width: 1200px) {
   .hero-section {
+    max-width: 1440px;
+    height: 600px;
     padding-top: 188px;
     padding-bottom: 188px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
 }
 
@@ -475,10 +487,11 @@ img {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .hero-section {
+  .hero-title {
     max-width: 496px;
     margin-bottom: 36px;
     font-size: 56px;
@@ -488,7 +501,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-section {
+  .hero-title {
     margin-bottom: 48px;
   }
 }
@@ -518,69 +531,123 @@ img {
   background-color: var(--color-pressed-button);
 }
 
-.flex-list {
-  display: flex;
-  gap: 24px;
-}
-
-.overlay {
-  height: 432px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url('../images/css/peopleoffice.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 @media screen and (min-width: 768px) {
-  .overlay {
-    height: 436px;
+  .flex-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .overlay {
-    height: 600px;
+  .flex-list {
+    display: flex;
+    gap: 24px;
   }
 }
 
 /*Оформлення секцій 2-4*/
+
 .activity-description {
-  width: 264px;
+  max-width: 396px;
 }
 
-.activity-description::before {
-  display: block;
-  content: '';
-  width: 264px;
-  height: 112px;
-  background-color: var(--color-background-light);
+.activity-description:not(:last-child) {
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .activity-description {
+    width: 356px;
+  }
+
+  .activity-description:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activity-description {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activity-description::before {
+    display: block;
+    content: '';
+    width: 264px;
+    height: 112px;
+    background-color: var(--color-background-light);
+    margin-bottom: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px;
+  }
+  .icon-antenna::before {
+    background-image: url(../images/css/antenna.svg);
+  }
+
+  .icon-clock::before {
+    background-image: url(../images/css/clock.svg);
+  }
+
+  .icon-diagram::before {
+    background-image: url(../images/css/diagram.svg);
+  }
+
+  .icon-astronaut::before {
+    background-image: url(../images/css/astronaut.svg);
+  }
+}
+
+.capability-title {
   margin-bottom: 8px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 64px;
+  color: var(--color-main-dark);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/css/antenna.svg);
+@media screen and (min-width: 768px) {
+  .capability-title {
+    text-align: left;
+  }
 }
 
-.icoon-clock::before {
-  background-image: url(../images/css/clock.svg);
+@media screen and (min-width: 1200px) {
+  .capability-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
-.icon-diagram::before {
-  background-image: url(../images/css/diagram.svg);
+.capability-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.icon-astronaut::before {
-  background-image: url(../images/css/astronaut.svg);
+@media screen and (min-width: 1200px) {
+  .capability-description {
+    font-weight: 400;
+  }
+}
+
+.section-wawd {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-wawd {
+    display: block;
+    padding-bottom: 120px;
+  }
 }
 
 .team-section {
@@ -636,13 +703,20 @@ img {
 
 .customers-button {
   display: block;
-  box-sizing: content-box;
-  width: 168px;
+  box-sizing: border-box;
+  width: 190px;
   height: 88px;
   border: 1px solid var(--color-button-borber-grey);
   border-radius: 4px;
   fill: var(--color-button-borber-grey);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .customers-button {
+    width: 168px;
+    height: 88px;
+  }
 }
 
 .customers-button:hover,
@@ -655,19 +729,47 @@ img {
 .img-customers {
   display: block;
   box-sizing: content-box;
-  width: 104px;
+  width: 110px;
   height: 56px;
-  padding: 16px 32px;
+  padding: 16px 40px;
+  margin: 0;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .img-customers {
+    width: 104px;
+    height: 56px;
+    padding: 16px 32px;
+  }
 }
 
 .flex-list-customers {
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 72px;
 }
-/*!!!Cторінка - Portfolio!!!*/
 
+@media screen and (min-width: 1200px) {
+  .flex-list-customers {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.customers-item {
+  flex-basis: calc((100%-16px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .customers-item {
+    flex-basis: calc((100%-24px) / 3);
+  }
+}
+
+/*!!!Cторінка - Portfolio!!!*/
 .portfilio-button {
   padding: 12px 24px;
   font-weight: 500;
