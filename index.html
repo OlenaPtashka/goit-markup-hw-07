@@ -23,43 +23,128 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="flex-list-main">
-          <nav class="flex-list-logo">
+        <div class="header-container-mobile">
+          <a class="logo" href="./index.html"
+            ><span class="logo-web">Web</span>Studio</a
+          >
+          <button class="burger-menu js-open-menu" type="button">
+            <svg class="burger-icon" aria-label="Перемикач мобільного меню">
+              <use href="./images/css/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!--Мобільне меню-->
+        <div class="mobile-menu js-menu-container">
+          <button class="mobile-menu-button js-close-menu" type="button">
+            <svg class="mobile-menu-item">
+              <use href="./images/css/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu-container">
+            <nav>
+              <ul class="list mobile-list-nav">
+                <li class="item">
+                  <a class="mobile-menu-link" href="./index.html">Studio</a>
+                </li>
+                <li class="item">
+                  <a class="mobile-menu-link" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="item">
+                  <a class="mobile-menu-link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+
+            <address>
+              <ul class="list">
+                <li>
+                  <a class="mobile-tel" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-mail" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="list mobile-social-list">
+              <li class="social-item">
+                <a class="social-link" href="#">
+                  <svg class="social-icon">
+                    <use href="./images/css/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link" href="#"
+                  ><svg class="social-icon">
+                    <use href="./images/css/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link" href="#"
+                  ><svg class="social-icon">
+                    <use href="./images/css/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link" href="#"
+                  ><svg class="social-icon">
+                    <use href="./images/css/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-container-desktop">
+          <div class="flex-list-main">
             <div>
               <a class="logo" href="./index.html"
                 ><span class="logo-web">Web</span>Studio</a
               >
             </div>
-            <ul class="list flex-list-header">
-              <li>
-                <a class="nav-link current" href="./index.html">Studio</a>
-              </li>
-              <li>
-                <a class="nav-link" href="./portfolio.html">Portfolio</a>
-              </li>
-              <li><a class="nav-link" href="">Contacts</a></li>
-            </ul>
-          </nav>
-          <address>
-            <ul class="list flex-list-header">
-              <li>
-                <a class="address-link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li>
-                <a class="address-link" href="tel:+110001111111"
-                  >+11 (000) 111-11-11</a
-                >
-              </li>
-            </ul>
-          </address>
+            <nav class="flex-list-logo">
+              <ul class="list flex-list-header">
+                <li>
+                  <a class="nav-link current" href="./index.html">Studio</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li><a class="nav-link" href="">Contacts</a></li>
+              </ul>
+            </nav>
+            <address>
+              <ul class="list flex-list-contacts">
+                <li>
+                  <a class="address-link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="address-link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
         </div>
       </div>
     </header>
     <main>
       <!--секція 1 із кнопкою-->
-      <section class="section hero-section overlay">
+      <section class="hero-section overlay">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button" data-modal-open>
@@ -68,7 +153,7 @@
         </div>
       </section>
       <!--секція 2 без назви з описом стратегії, цілей, компетенцій, технологій-->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 hidden>#</h2>
           <ul class="list flex-list">
@@ -102,9 +187,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--Секція 3 "What are we doing" з картинками-->
-      <section class="section-wawd">
+      <!-- <section class="section-wawd">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="list flex-list">
@@ -137,9 +222,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--Секція 4 про команду - подумати як розмістити фото і підписи-->
-      <section class="section team-section">
+      <!-- <section class="section team-section">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="list flex-list">
@@ -325,8 +410,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section">
+      </section> -->
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-title">Customers</h2>
           <ul class="list flex-list-customers">
@@ -392,9 +477,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-flex">
           <div class="footer-item">
@@ -465,9 +550,9 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-button" type="button" data-modal-close>
           <svg class="modal-button-item">
@@ -557,8 +642,9 @@
           <button class="form-button" type="submit">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
