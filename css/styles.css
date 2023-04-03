@@ -644,6 +644,27 @@ img {
   background-color: var(--color-background-light);
 }
 
+.team-container {
+  width: 294px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-container {
+    width: 768px;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-container {
+    width: 100%;
+    width: 1158px;
+    padding: 0 15px;
+  }
+}
+
 .flex-list-team {
   display: flex;
   flex-direction: column;
@@ -656,6 +677,7 @@ img {
     flex-wrap: wrap;
     row-gap: 64px;
     column-gap: 24px;
+    justify-content: center;
   }
 }
 
@@ -673,16 +695,17 @@ img {
 } */
 
 .team-position {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 264px;
-  margin: 0 auto;
   background-color: var(--color-main-light);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-img {
+  width: 100%;
+  height: auto;
 }
 
 .team-description {
@@ -907,13 +930,68 @@ img {
 /*Футер*/
 
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: var(--color-main-dark);
   color: var(--color-background-header-main);
 }
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 428px) {
+  .footer-container {
+    width: 428px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    width: 768px;
+    padding-left: 108px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    width: 100%;
+    width: 1158px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-first-flex {
+    display: flex;
+  }
+}
+
+.footer-item {
+  width: 268px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-item {
+    margin: 0;
+    text-align: left;
+  }
+}
+
 .footer-logo {
+  display: block;
   margin-bottom: 16px;
   color: var(--color-background-light);
   text-decoration: none;
@@ -921,28 +999,58 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    text-align: left;
+  }
 }
 
 .footer-description {
   width: 264px;
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.footer-flex {
-  display: flex;
+.subscribe {
+  text-align: center;
+  text-align: ;
+}
+
+/* Перевірити, чи все правильно виставлено і чи властивість text-aline не впливає... */
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-top: 72px;
+  }
 }
 
 .paragraf-footer {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraf-footer {
+    text-align: left;
+  }
 }
 
 .social-list-footer {
@@ -950,8 +1058,18 @@ img {
   gap: 16px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 208px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-list-footer {
+    justify-content: flex-start;
+    margin: 0;
+  }
 }
 
 .social-link-footer {
@@ -980,12 +1098,57 @@ img {
 
 .subscribe-footer {
   display: flex;
-  gap: 24px;
-  margin-top: 16px;
-  padding: 0;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-footer {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+/* Перевірити чи все вірно вказано! */
+@media screen and (min-width: 1200px) {
+  .subscribe-footer {
+    flex-direction: row;
+    gap: 24px;
+    padding: 0;
+  }
 }
 
 .subscribe-input {
+  width: 100%;
+  max-width: 398px;
+  height: 40px;
+  padding-left: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid var(--color-main-light);
+  border-radius: 4px;
+  background-color: var(--color-main-dark);
+  color: var(--color-main-light);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+}
+
+@media screen and (min-width: 428px) {
+  .subscribe-input {
+    width: 398px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
+}
+
+/* Це для десктопа */
+/* .subscribe-input {
   width: 264px;
   height: 40px;
   padding-left: 16px;
@@ -998,14 +1161,16 @@ img {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
-}
+} */
 
 .subscribe-input::placeholder {
   color: var(--color-main-light);
 }
 
 .subscribe-lable {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .footer-button {
@@ -1019,10 +1184,18 @@ img {
   background-color: var(--color-primary-brand);
 }
 
-.social-footer-item {
-  margin-left: 120px;
+@media screen and (min-width: 768px) {
+  .social-footer-item {
+    margin-left: 24px;
+  }
 }
 
+@media screen and (min-width: 1200px) {
+  .social-footer-item {
+    margin-left: 120px;
+  }
+}
+/* Забрала клас із HTML "subscribe-footer-item"- 530line Задати для десктопу! */
 .subscribe-footer-item {
   margin-left: 80px;
 }
