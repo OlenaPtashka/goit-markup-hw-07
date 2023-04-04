@@ -159,13 +159,11 @@ img {
   display: none;
   position: fixed;
   top: 0;
-  bottom: 0;
+  left: 0;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: 428px;
   height: 100%;
-  max-height: 796px;
   overflow-y: auto;
   background-color: var(--color-main-light);
   transform: translateX(100%);
