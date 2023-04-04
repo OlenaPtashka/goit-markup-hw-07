@@ -430,8 +430,8 @@ img {
 /*Секція 1 із кнопкою*/
 
 .hero-section {
-  height: 432px;
   max-width: 1440px;
+  height: 432px;
   padding-top: 112px;
   padding-bottom: 112px;
   margin: auto;
@@ -447,10 +447,24 @@ img {
   background-size: cover;
 }
 
-@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 190dpi),
+@media screen and (min-width: 428px) {
+  .hero-section {
+    max-width: 428px;
+    height: 436px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/css/bgpeopleoffice.jpg');
+  }
+}
+
+@media screen and (min-width: 428px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-section {
+    max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -459,16 +473,28 @@ img {
   }
 }
 
-@media screen and (min-width: 428px) {
-  .hero-section {
-    max-width: 428px;
-    height: 436px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero-section {
     max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/css/bgpeopleoffice.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/css/bgpeopleoffice@2x.jpg');
   }
 }
 
@@ -478,11 +504,6 @@ img {
     height: 600px;
     padding-top: 188px;
     padding-bottom: 188px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
