@@ -60,6 +60,7 @@ img {
 
 @media screen and (min-width: 428px) {
   .container {
+    display: block;
     width: 428px;
     padding: 0 16px;
   }
@@ -125,6 +126,7 @@ img {
 .header-container-mobile {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -195,6 +197,13 @@ img {
   cursor: pointer;
 }
 
+.mobile-menu-button:hover,
+.mobile-menu-button:focus {
+  cursor: pointer;
+  background-color: var(--color-pressed-button);
+  border-color: var(--color-pressed-button);
+}
+
 .mobile-menu-item {
   display: block;
   margin: auto;
@@ -203,6 +212,10 @@ img {
   background-size: auto auto;
   fill: var(--color-main-dark);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-button:hover .mobile-menu-item {
+  fill: var(--color-main-light);
 }
 
 .mobile-menu-link {
@@ -855,7 +868,6 @@ img {
 }
 
 .img-customers {
-  display: block;
   box-sizing: content-box;
   max-width: 110px;
   max-height: 56px;
@@ -879,10 +891,20 @@ img {
 
 .flex-list-customers {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   flex-basis: calc((100% - 16px) / 2);
   row-gap: 72px;
+  column-gap: 12px;
+}
+
+@media screen and (min-width: 428px) {
+  .flex-list-customers {
+    justify-content: space-between;
+    flex-basis: calc((100% - 16px) / 2);
+    row-gap: 72px;
+    column-gap: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
