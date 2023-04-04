@@ -450,7 +450,6 @@ img {
 @media screen and (min-width: 428px) {
   .hero-section {
     max-width: 428px;
-    height: 436px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -464,7 +463,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-section {
-    max-width: 768px;
+    max-width: 428px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -476,6 +475,7 @@ img {
 @media screen and (min-width: 768px) {
   .hero-section {
     max-width: 768px;
+    height: 436px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
